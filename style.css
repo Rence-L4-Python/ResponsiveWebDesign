@@ -13,7 +13,7 @@ header{
     justify-content: center;
     flex-direction: column;
 }
-header img{
+header > img{
     margin: 12px;
     width: 80px;
     filter: invert()
@@ -28,8 +28,11 @@ h1, h2{
     justify-content: center;
     font-family: "Protest Guerrilla", serif;
     font-size: 3rem;
-    margin: 12px;
-    padding: 12px;
+    margin: 20px;
+    padding: 0;
+}
+h2{
+    margin: 0;
 }
 nav{
     display: flex;
@@ -49,6 +52,7 @@ footer{
     color: #e9e9e9;
     justify-content: center;
     position: relative;
+
 }
 main{
     background-color: #e9e9e9;
@@ -75,25 +79,67 @@ section > img{
 }
 /*Small mobile screen: 360px+*/
 @media only screen and (min-width: 360px){
-    header, footer{
-        padding: 12px;
+    header > img{
+        padding-top: 12px;
     }
 }
 /*Large mobile screen: 540px+*/
 @media only screen and (min-width: 540px){
-    header, footer{
+    header > img{
+        margin: 20px;
+        padding-top: 20px;
+    }
+    nav{
+        gap: 4rem;
+    }
+    h1{
+        margin: 30px;
+    }
+    p{
+        margin: 20px;
+        padding: 20px;
+    }
+    #authorPicture{
+        margin: 20px;
         padding: 20px;
     }
 }
 /*Tablet screen: 720px+*/
 @media only screen and (min-width: 720px){
-    header, footer{
-        padding: 30px;
+    body{
+        background-color: #14181d;
+        height: auto;
+    }
+    h1{
+        margin: 40px;
+    }
+    nav{
+        gap: 8rem;
+    }
+    main{
+        margin: 3.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    main > section:nth-child(3){
+        flex-direction: row-reverse;
+    }
+    main > section:nth-child(3) p{
+        padding-top: 0;
+    }
+    main > section:nth-child(3) article{
+        margin-top: 40px;
+    }
+    #authorPicture{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    #imageGrid{
+        grid-template-columns: 50% 50%;
     }
 }
 /*Desktop screen: 1024px+*/
 @media only screen and (min-width: 1024px){
-    header, footer{
-        padding: 50px;
-    }
 }
