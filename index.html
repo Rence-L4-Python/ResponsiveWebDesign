@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Protest+Guerrilla&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styleREWORK.css">
     </head>
     <body> <!--Creating the layout structure using header, main, and footer-->
         <header>
@@ -20,12 +20,12 @@
             </nav>
         </header>
         <main> <!--Using sections to group content by themes, Section 1 contains most of the text content, Section 2 contains the image grid, Section 3 contains the author portion-->
-            <section>
+            <section class="section1">
                 <article> <!--Using articles within sections to further group content-->
                     <h1><span id="biggerText">Erased Tapes:</span><br>Exploring the Sonic Frontier</h1> <!--Different heading to emphasize the text in larger devices and also for styling, Used <span> to style within the text since it has to be large on desktop-->
                     <p id="smallerWidth">Lorem ipsum odor amet, consectetuer adipiscing elit. Mi eu scelerisque turpis posuere tempor? Leo condimentum himenaeos molestie elit; maximus iaculis proin nulla. Ullamcorper nibh cras conubia suscipit dapibus sagittis, facilisi habitant vivamus. Etiam fusce posuere himenaeos ipsum commodo sollicitudin himenaeos nec.</p>
                 </article>
-                <div id="articlesContainer">
+                <div id="articlesContainer"> <!--Container for the rest of the articles to style them easily especially on the target desktop size-->
                     <article>
                         <h2>Heading</h2>
                         <p>Montes ridiculus mus tellus nunc vulputate. Cras facilisi congue et facilisis porttitor litora etiam praesent porttitor. Sollicitudin cubilia scelerisque diam taciti lacus. Dapibus penatibus augue dapibus sagittis; rhoncus accumsan. Accumsan urna et, ultrices placerat justo rutrum. Tristique mattis ante cras accumsan convallis phasellus fermentum magna. Rhoncus curabitur pharetra proin ante nam adipiscing accumsan hac. Rutrum efficitur nullam integer ut ex id. Pulvinar vel at vestibulum vivamus sed nascetur eget.</p>
@@ -53,7 +53,7 @@
                 <img src="assets/articulation.jpg" class="item-4">
                 <img src="assets/blurred.jpg" class="item-5">
             </section>
-            <section>
+            <section class="section3">
                 <img src="assets/profile_picture.jpg" alt="Author's Portrait Picture" id="authorPicture"> <!--Used an ID just to make it easier to find on the stylesheet-->
                 <article>
                     <h2>The Author</h2>
