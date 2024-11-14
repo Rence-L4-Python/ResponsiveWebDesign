@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --spacing-sm: 16px;
+    --spacing-lg-mb: 16px;
+    --spacing-lg-tb: 32px;
+    --spacing-lg-dt: 48px;
+}
+html, body{
+    height: 100%;
+    background-color: #231651;
+    font-family: "Lato", sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm);
+    background-color: #4DCCBD;
+}
+nav{
+    display: none;
+}
+h1{
+    text-align: center;
+    font-family: "Teko", sans-serif;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 900px;
+    gap: var(--spacing-lg-mb);
+    padding-top: var(--spacing-lg-mb);
+    padding-bottom: var(--spacing-lg-mb);
+    margin: auto;
+}
+article{
+    padding: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+article > p{
+    margin-top: var(--spacing-sm);
+    margin-bottom: calc(var(--spacing-sm) * 2);
+}
+button{
+    border: none;
+    border-radius: var(--spacing-sm);
+    outline: none;
+    padding: var(--spacing-sm);
+    background-color: #4DCCBD;
+    font-size: 2em;
+    font-family: "Teko", sans-serif;
+    font-weight: 500;
+    width: 100%;
+}
+.card{
+    background-color: white;
+    font-size: 1.5em;
+}
+.card img{
+    width: 100%;
+}
+.searchbar input{
+    border: none;
+    border-radius: var(--spacing-sm);
+    outline: none;
+    padding: var(--spacing-sm);
+    text-align: center;
+    font-size: 2em;
+    width: 4em;
+}
+#logo{
+    font-size: 3em;
+    font-weight: 500;
+    font-family: "Teko", sans-serif;
+}
+/*TARGET DEVICES BREAKPOINTS*/
+/*TABLET SCREEN: 720px+*/
+@media only screen and (min-width: 720px){
+    nav{
+        display: block;
+        gap: var(--spacing-lg-tb);
+    }
+    main{
+        padding: var(--spacing-lg-tb)
+    }
+}
+/*DESKTOP SCREEN: 1024px+*/
+@media only screen and (min-width: 1024px){
+    main{
+        padding: var(--spacing-lg-dt)
+    }
+}
