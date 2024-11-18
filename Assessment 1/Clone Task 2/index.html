@@ -4,34 +4,35 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>watch.it</title>
-        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body> <!--Creating the layout structure using header, and main-->
         <header>
-            <div id="logo">watch.it</div>
-            <nav>
+            <div id="logo">watch.it</div> <!--Site logo/heading-->
+            <nav> <!--Simple navigation portion without using lists-->
                 <a href="#">Action</a>
                 <a href="#">Comedy</a>
                 <a href="#">Romance</a>
                 <a href="#">Drama</a>
             </nav>
-            <div class="searchbar">
+            <div class="searchbar"> <!--Searchbar portion-->
                 <input type="search" placeholder="SEARCH">
             </div>
         </header>
         <main>
-            <div class="card-container">
-                <div class="card" id="card-1">
+            <div class="card-container"> <!--Movie container wrapper which contain "cards", named after their shape-->
+                <div class="card" id="card-1"> <!--Each card has a unique ID to achieve the final styling in desktop-->
                     <img src="assets/who-framed-roger-rabbit.jpg">
-                    <article>
+                    <article> <!--Article tags are used to group together the content of the movie containers-->
                         <h1>Who Framed Roger Rabbit (1988)</h1>
-                        <p>In a world where cartoons and humans coexist, a detective must solve a zany, high-stakes mystery. Packed with wild humor, groundbreaking animation, and noir twists, this unique film will pull you into a world where anything is possible!</p>
-                        <button><p>WATCH NOW</p></button>
+                        <section> <!--Section tag is used to achieve the distinct layout of the first container in the desktop wireframe-->
+                            <p>In a world where cartoons and humans coexist, a detective must solve a zany, high-stakes mystery. Packed with wild humor, groundbreaking animation, and noir twists, this unique film will pull you into a world where anything is possible!</p>
+                            <button><p>WATCH NOW</p></button> <!--Used <p> tags inside the button to achieve the line-break effects in the wireframe-->
+                        </section>
                     </article>
                 </div>
                 <div class="card" id="card-2">
@@ -76,6 +77,5 @@
                 </div>
             </div>
         </main>
-        <script src="" async defer></script>
     </body>
 </html>

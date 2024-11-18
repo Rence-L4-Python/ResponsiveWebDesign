@@ -1,7 +1,10 @@
-*{
+/*Defining elements, classes, and IDs for overall usage. This portion was first made with mobile devices in mind, using 360px as a base.*/
+/*MOBILE SCREEN: 360px-720px*/
+*{ /*Removing default margin and padding of all elements*/
     margin: 0;
     padding: 0;
 }
+/*Spacing variables based on specification*/
 :root{
     --spacing-sm: 16px;
     --spacing-lg-mb: 16px;
@@ -9,7 +12,7 @@
     --spacing-lg-dt: 48px;
 }
 html, body{
-    height: 100%;
+    height: 100%; /*Helps the design use the entire height of the page*/
     background-color: #231651;
     font-family: "Lato", sans-serif;
     color: #070410;
@@ -54,7 +57,7 @@ article{
     justify-content: center;
     align-items: center;
 }
-article > p{
+article p{
     margin-bottom: calc(var(--spacing-sm) * 2);
 }
 button{
@@ -62,28 +65,11 @@ button{
     border-radius: var(--spacing-sm);
     outline: none;
     padding: var(--spacing-sm);
-    background-color: #4DCCBD;
+    background-color: #EEF36A;
     font-size: 2em;
     font-family: "Teko", sans-serif;
     font-weight: 500;
     width: 100%;
-}
-.card{
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5em;
-}
-.card img{
-    width: 100%;
-}
-.searchbar{
-    height: 100%;
-}
-.searchbar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 input{
     display: flex;
@@ -96,10 +82,29 @@ input{
     text-align: center;
     width: 9rem;
 }
-input::placeholder{
+input::placeholder{ /*Only the placeholder text is affected, typing inside the searchbar results in the normal font size.*/
     font-size: 2em;
 }
-#logo{
+section{ /*This is used to group the contents inside the first card, since the flex-direction has to be changed to row with desktop screen sizes.*/
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.card{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+.card img{
+    width: 100%; /*Uses full size of the images*/
+}
+.searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo{ /*Website logo*/
     display: flex;
     font-weight: 500;
     font-family: "Teko", sans-serif;
@@ -139,10 +144,10 @@ input::placeholder{
         flex-grow: 1;
     }
     .card-container{
-        gap: var(--spacing-lg-tb);
+        gap: var(--spacing-lg-tb); /*Adds the gap between the cards.*/
     }
-    .card{
-        flex: 1 1 calc(50% - var(--spacing-lg-tb));
+    .card{ 
+        flex: 1 1 calc(50% - var(--spacing-lg-tb)); /*Creates two columns, used to achieve the layout in the wireframe. The calc is used to add the gaps to the columns.*/
         box-shadow: 12px 12px rgba(7, 4, 16, 0.3);
     }
 }
@@ -153,5 +158,43 @@ input::placeholder{
     }
     main{
         padding: var(--spacing-lg-dt);
+    }
+    section{
+        flex-direction: row;
+    }
+    button p{
+        width: 100%;
+    }
+    #card-1{
+        flex: 100%;
+        flex-direction: column;
+    }
+    #card-1 img{
+        height: calc(var(--spacing-lg-dt) * 8); /*Image height returned whitespace when percentages was used, so this was used as an alternative.*/
+        object-fit: cover;
+    }
+    #card-1 button p{
+        width: 50%;
+    }
+    #card-4{
+        flex: 100%;
+        flex-direction: row;
+    }
+    #card-4 > article{
+        width: 100%;
+    }
+    #card-5{
+        flex: 100%;
+        flex-direction: row;
+    }
+    #card-5 > article{
+        width: 100%;
+    }
+    #card-6{
+        flex: 100%;
+        flex-direction: row;
+    }
+    #card-6 > article{
+        width: 100%;
     }
 }
