@@ -12,6 +12,7 @@ html, body{
     height: 100%;
     background-color: #231651;
     font-family: "Lato", sans-serif;
+    color: #070410;
 }
 header{
     display: flex;
@@ -28,15 +29,19 @@ h1{
     font-family: "Teko", sans-serif;
 }
 main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     max-width: 900px;
-    gap: var(--spacing-lg-mb);
+    margin: auto;
     padding-top: var(--spacing-lg-mb);
     padding-bottom: var(--spacing-lg-mb);
-    margin: auto;
+}
+nav > a{
+    text-decoration: none;
+    color: #070410;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg-mb);
 }
 article{
     padding: var(--spacing-sm);
@@ -61,7 +66,10 @@ button{
     width: 100%;
 }
 .card{
-    background-color: white;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+
     font-size: 1.5em;
 }
 .card img{
@@ -84,17 +92,38 @@ button{
 /*TARGET DEVICES BREAKPOINTS*/
 /*TABLET SCREEN: 720px+*/
 @media only screen and (min-width: 720px){
+    header{
+        box-shadow: 0 12px rgba(7, 4, 16, 0.3);
+    }
     nav{
-        display: block;
+        display: flex;
         gap: var(--spacing-lg-tb);
     }
     main{
-        padding: var(--spacing-lg-tb)
+        padding: var(--spacing-lg-tb);
+    }
+    button{
+        position: relative;
+        bottom: 0;
+    }
+    article, p{
+        display: flex;
+        flex-grow: 1;
+    }
+    .card-container{
+        gap: var(--spacing-lg-tb);
+    }
+    .card{
+        flex: 1 1 calc(50% - var(--spacing-lg-tb));
+        box-shadow: 12px 12px rgba(7, 4, 16, 0.3);
     }
 }
 /*DESKTOP SCREEN: 1024px+*/
 @media only screen and (min-width: 1024px){
+    nav{
+        gap: var(--spacing-lg-dt);
+    }
     main{
-        padding: var(--spacing-lg-dt)
+        padding: var(--spacing-lg-dt);
     }
 }
