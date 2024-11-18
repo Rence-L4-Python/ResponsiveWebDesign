@@ -20,13 +20,17 @@ header{
     align-items: center;
     padding: var(--spacing-sm);
     background-color: #4DCCBD;
+    font-size: 2em;
 }
 nav{
     display: none;
 }
 h1{
+    display: flex;
+    align-items: center;
     text-align: center;
     font-family: "Teko", sans-serif;
+    height: 3em;
 }
 main{
     max-width: 900px;
@@ -51,7 +55,6 @@ article{
     align-items: center;
 }
 article > p{
-    margin-top: var(--spacing-sm);
     margin-bottom: calc(var(--spacing-sm) * 2);
 }
 button{
@@ -69,23 +72,35 @@ button{
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
-
     font-size: 1.5em;
 }
 .card img{
     width: 100%;
 }
-.searchbar input{
+.searchbar{
+    height: 100%;
+}
+.searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     border-radius: var(--spacing-sm);
-    outline: none;
     padding: var(--spacing-sm);
+    outline: none;
     text-align: center;
+    width: 9rem;
+}
+input::placeholder{
     font-size: 2em;
-    width: 4em;
 }
 #logo{
-    font-size: 3em;
+    display: flex;
     font-weight: 500;
     font-family: "Teko", sans-serif;
 }
@@ -94,10 +109,16 @@ button{
 @media only screen and (min-width: 720px){
     header{
         box-shadow: 0 12px rgba(7, 4, 16, 0.3);
+        font-size: 3em;
+        height: 1em;
     }
     nav{
         display: flex;
         gap: var(--spacing-lg-tb);
+        margin: var(--spacing-sm)
+    }
+    nav a{
+        font-size: 1rem;
     }
     main{
         padding: var(--spacing-lg-tb);
@@ -105,6 +126,13 @@ button{
     button{
         position: relative;
         bottom: 0;
+    }
+    button p{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 50%;
     }
     article, p{
         display: flex;
