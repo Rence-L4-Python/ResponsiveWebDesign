@@ -1,4 +1,4 @@
-/*Defining elements, classes, and IDs for overall usage. This portion was first made with mobile devices in mind, using 360px as a base.*/
+/*Defining elements, classes, and IDs for overall usage. This portion was first made with mobile devices in mind, using 360px as a base. Flexbox is heavily used within the code.*/
 /*MOBILE SCREEN: 360px-720px*/
 *{ /*Removing default margin and padding of all elements*/
     margin: 0;
@@ -54,11 +54,12 @@ article{
     padding: var(--spacing-sm);
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     justify-content: center;
     align-items: center;
 }
-article p{
-    margin-bottom: calc(var(--spacing-sm) * 2);
+p{
+    flex-grow: 1;
 }
 button{
     border: none;
@@ -71,7 +72,7 @@ button{
     font-weight: 500;
     width: 100%;
 }
-input{
+input{ /*Styling the searchbar*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,6 +104,9 @@ section{ /*This is used to group the contents inside the first card, since the f
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.movie-description{
+    margin-bottom: calc(var(--spacing-sm) * 2);
 }
 #logo{ /*Website logo*/
     display: flex;
@@ -139,10 +143,6 @@ section{ /*This is used to group the contents inside the first card, since the f
         margin: auto;
         width: 50%;
     }
-    article, p{
-        display: flex;
-        flex-grow: 1;
-    }
     .card-container{
         gap: var(--spacing-lg-tb); /*Adds the gap between the cards.*/
     }
@@ -165,6 +165,19 @@ section{ /*This is used to group the contents inside the first card, since the f
     button p{
         width: 100%;
     }
+    .card-container{
+        gap: var(--spacing-lg-dt);
+    }
+    .card-row{ /*Switches the layout to rows.*/
+        flex: 100%; /*Helps maintain the layout.*/
+        flex-direction: row;
+    }
+    .card-row img{
+        width: 50%;
+    }
+    .card-row > article{
+        width: 50%;
+    }
     #card-1{
         flex: 100%;
         flex-direction: column;
@@ -175,26 +188,5 @@ section{ /*This is used to group the contents inside the first card, since the f
     }
     #card-1 button p{
         width: 50%;
-    }
-    #card-4{
-        flex: 100%;
-        flex-direction: row;
-    }
-    #card-4 > article{
-        width: 100%;
-    }
-    #card-5{
-        flex: 100%;
-        flex-direction: row;
-    }
-    #card-5 > article{
-        width: 100%;
-    }
-    #card-6{
-        flex: 100%;
-        flex-direction: row;
-    }
-    #card-6 > article{
-        width: 100%;
     }
 }
