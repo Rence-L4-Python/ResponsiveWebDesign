@@ -11,48 +11,75 @@
     <body>
         <header>
             <div class="header-base">
-                <div id="header-heading" id="country-name">PHILIPPINES</div>
+                <div class="content-wrapper" id="header-wrapped">
+                    <div id="header-heading" id="country-name">PHILIPPINES</div>
+                    <select class="custom-select">
+                        <option value="UAE">UAE</option>
+                        <option value="UK">UK</option>
+                        <option value="USA">USA</option>
+                        <option value="PH" selected>PHILIPPINES</option>
+                        <option value="SG">SINGAPORE</option>
+                    </select>
+                </div>
             </div>
             <div class="expandable-menu"></div>
             <div class="expandable-button"></div>
             <div class="topics">
-                <div id="topics-heading">SOCIAL</div>
+                <div class="content-wrapper">
+                    <div id="topics-heading">SOCIAL</div>
+                </div>
             </div>
         </header>
         <main>
-            <div class="topic-container">
-                <div class="column">
-                    <div class="card">
-
+            <div class="content-wrapper">
+                <div class="topic-container">
+                    <div class="column">
+                        <div class="card">
+                            <div class="icon"></div>
+                            <p>Poverty Headcount Ratio</p>
+                            <p>1</p>
+                        </div>
+                        <div class="card">
+                            <div class="icon"></div>
+                            <p>Life Expectancy</p>
+                            <p>1</p>
+                        </div>
+                        <div class="card">
+                            <div class="icon"></div>
+                            <p>Total Population</p>
+                            <p>1</p>
+                        </div>
                     </div>
-                    <div class="card">
-                        
-                    </div>
-                    <div class="card">
-                        
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                    
-                    </div>
-                    <div class="card">
-                        
-                    </div>
-                    <div class="card" id="institutions">
-                        
+                    <div class="column">
+                        <div class="card">
+                            <div class="icon"></div>
+                            <p>Annual Population Growth</p>
+                            <p>1</p>
+                        </div>
+                        <div class="card">
+                            <div class="icon"></div>
+                            <p>Net Migration</p>
+                            <p>1</p>
+                        </div>
+                        <div class="card" id="institutions">
+                            <div class="icon"></div>
+                            <p>Human Capital Index</p>
+                            <p>1</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="extra-container">
-                <section id="section-1">
-                    <img src="">
-                </section>
-                <section id="section-2">
-                    <h1 id="country-name">PHILIPPINES</h1>
-                    <p id="change-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus  erat in diam tincidunt vehicula.</p>
-                    <a href="#">READ MORE</a>
-                </section>
+                <div class="content-wrapper">
+                    <section id="section-1">
+                        <img src="Assets/PlaceholderImage.svg">
+                    </section>
+                    <section id="section-2">
+                        <h1 id="country-name">PHILIPPINES</h1>
+                        <p id="change-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus  erat in diam tincidunt vehicula.</p>
+                        <a href="#">READ MORE</a>
+                    </section>
+                </div>
             </div>
         </main>
         <script src="script.js" async defer></script>

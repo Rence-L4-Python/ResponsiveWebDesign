@@ -5,18 +5,29 @@
 }
 html, body{
     height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", serif;
 }
 body{
     display: flex;
     flex-direction: column;
-    font-family: "Inter", serif;
     font-weight: 900;
-    background-color: rgb(31,31,31);
 }
 header{
     display: flex;
     flex-direction: column;
+}
+.custom-select{
+    display: none;
+    font-family: "Inter", serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-align: center;
+}
+.custom-select option{
+    font-family: "Inter", serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
 }
 main{
     display: flex;
@@ -34,11 +45,18 @@ section{
     align-items: center;
     text-align: center;
 }
+.content-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
 .header-base{
     display: flex;
     width: 100%;
     height: 100px;
-    background-color: rgb(80,80,80);
+    background-image: linear-gradient(#0d3b66,#229eb4 250%);
     justify-content: center;
     align-items: center;
 }
@@ -59,18 +77,28 @@ section{
 }
 .topics{
     display: flex;
-    width: 100%;
-    height: 50px;
-    background-color: rgb(177,177,177);
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(244,211,94);
 }
 .card{
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
     width: 330px;
     height: 200px;
-    background-color: rgb(177,177,177);
+    background-image: linear-gradient(#e6e6e6, #ffffff 300%);
     border-radius: 2rem;
+}
+.icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 2rem;
+    background-color: white;
 }
 .column{
     display: flex;
@@ -82,7 +110,7 @@ section{
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    background-color: rgb(80,80,80);
+    background-image: linear-gradient(#0d3b66,#229eb4 250%);
     color: white;
     padding-top: 3rem;
     padding-bottom: 6rem;
@@ -90,11 +118,10 @@ section{
 #header-heading{
     font-size: 3rem;
     color: white;
-
 }
 #topics-heading{
     font-size: 1.5rem;
-    color: rgb(80,80,80);
+    color: rgb(1,8,18);
     font-weight: 800;
 }
 #section-1{
@@ -115,18 +142,19 @@ section{
 }
 #section-2 h1{
     font-size: 3rem;
+    font-weight: 900;
 }
 #section-2 p{
     width: 75%;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 #section-2 a{
     background-color: white;
-    color: rgb(80,80,80);
+    color: #0d3b66;
     text-decoration: none;
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding: 4rem;
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
@@ -134,23 +162,29 @@ section{
 /*target devices breakpoints*/
 /*tablet screen: 768px+*/
 @media only screen and (min-width: 768px){
+    #header-wrapped{
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        width: 1200px;
+    }
     .header-base{
         justify-content: left;
     }
     #header-heading{
         margin-left: 2rem;
     }
+    .custom-select{
+        display: flex;
+        margin-right: 2rem;
+        width: 300px;
+        height: 40px;
+    }
     .expandable-button{
         display: none;
     }
-    .topics{
-        height: 70px;
-    }
     .topic-container{
         flex-direction: row;
-    }
-    #topics-heading{
-        font-size: 2.25rem;
     }
     #section-1 img{
         width: 360px;
@@ -162,9 +196,14 @@ section{
 }
 /*desktop screen: 1200px+*/
 @media only screen and (min-width: 1200px){
+    #header-wrapped{
+        justify-content: space-between;
+    }
     body{
-        max-width: 1200px;
         margin: auto;
+    }
+    .content-wrapper{
+        flex-direction: row;
     }
     .topic-container{
         flex-direction: column;
@@ -178,10 +217,11 @@ section{
     }
     #section-1{
         padding-left: 2rem;
+        padding-bottom: 0;
     }
     #section-1 img{
         width: 310px;
-        height: 600px;
+        height: 100%;
     }
     #section-2{
         width: 50%;
