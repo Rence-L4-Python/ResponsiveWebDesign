@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", serif;
+    font-weight: 900;
+    background-color: rgb(31,31,31);
+}
+header{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-top: 50px;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.header-base{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(80,80,80);
+    justify-content: center;
+    align-items: center;
+}
+.expandable-menu{
+    display: none;
+    height: 250px;
+    background-color: rgb(100,100,100);
+}
+.expandable-button{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(120,120,120);
+}
+.topic-container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.topics{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(177,177,177);
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    display: flex;
+    width: 330px;
+    height: 200px;
+    background-color: rgb(177,177,177);
+    border-radius: 2rem;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.extra-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(80,80,80);
+    color: white;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+}
+#header-heading{
+    font-size: 3rem;
+    color: white;
+
+}
+#topics-heading{
+    font-size: 1.5rem;
+    color: rgb(80,80,80);
+    font-weight: 800;
+}
+#section-1{
+    padding-top: 0;
+    padding-bottom: 2rem;
+}
+#section-1 img{
+    width: 240px;
+    height: 200px;
+    background-color: white;
+    border-radius: 1rem;
+}
+#section-2{
+    gap: 1.5rem;
+    padding: 2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#section-2 h1{
+    font-size: 3rem;
+}
+#section-2 p{
+    width: 75%;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+#section-2 a{
+    background-color: white;
+    color: rgb(80,80,80);
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.5rem;
+    padding: 4rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+/*target devices breakpoints*/
+/*tablet screen: 768px+*/
+@media only screen and (min-width: 768px){
+    .header-base{
+        justify-content: left;
+    }
+    #header-heading{
+        margin-left: 2rem;
+    }
+    .expandable-button{
+        display: none;
+    }
+    .topics{
+        height: 70px;
+    }
+    .topic-container{
+        flex-direction: row;
+    }
+    #topics-heading{
+        font-size: 2.25rem;
+    }
+    #section-1 img{
+        width: 360px;
+        height: 300px;
+    }
+    #section-2{
+        gap: 2rem;
+    }
+}
+/*desktop screen: 1200px+*/
+@media only screen and (min-width: 1200px){
+    body{
+        max-width: 1200px;
+        margin: auto;
+    }
+    .topic-container{
+        flex-direction: column;
+    }
+    .column{
+        flex-direction: row;
+    }
+    .extra-container{
+        flex-direction: row;
+        padding-top: 6rem;
+    }
+    #section-1{
+        padding-left: 2rem;
+    }
+    #section-1 img{
+        width: 310px;
+        height: 600px;
+    }
+    #section-2{
+        width: 50%;
+        align-items: flex-start;
+        justify-content: left;
+        text-align: left;
+    }
+    #section-2 h1{
+        font-size: 4rem;
+    }
+    #section-2 p{
+        width: auto;
+    }
+}
