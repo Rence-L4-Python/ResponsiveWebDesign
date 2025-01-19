@@ -14,57 +14,67 @@
                 <div class="content-wrapper" id="header-wrapped">
                     <div id="header-heading" id="country-name">PHILIPPINES</div>
                     <select class="custom-select">
-                        <option value="UAE">UAE</option>
-                        <option value="UK">UK</option>
+                        <option value="AE">UAE</option>
+                        <option value="GB">UK</option>
                         <option value="USA">USA</option>
                         <option value="PH" selected>PHILIPPINES</option>
                         <option value="SG">SINGAPORE</option>
                     </select>
                 </div>
             </div>
-            <div class="expandable-menu"></div>
+            <div class="expandable-menu">
+                <div class="menu-option"><a href="#" onclick="fetchCountryStats('AE')">UAE</a></div>
+                <div class="menu-option"><a href="#" onclick="fetchCountryStats('GB')">UK</a></div>
+                <div class="menu-option"><a href="#" onclick="fetchCountryStats('US')">USA</a></div>
+                <div class="menu-option"><a href="#" onclick="fetchCountryStats('PH')">PHILIPPINES</a></div>
+                <div class="menu-option"><a href="#" onclick="fetchCountryStats('SG')">SINGAPORE</a></div>
+            </div>
             <div class="expandable-button"></div>
             <div class="topics">
                 <div class="content-wrapper">
-                    <div id="topics-heading">SOCIAL</div>
+                    <div id="topics-heading">OVERVIEW</div>
+                    <div class="topic-navigation">
+                        <button id="prev-topic-btn">&lt;</button>
+                        <button id="next-topic-btn">&gt;</button>
+                    </div>
                 </div>
             </div>
         </header>
         <main>
             <div class="content-wrapper">
-                <div class="topic-container">
+                <div class="topic-container" id="topic-container">
                     <div class="column">
                         <div class="card">
                             <div class="icon"></div>
-                            <p>Poverty Headcount Ratio</p>
-                            <p>1</p>
+                            <p id="population-title">Total Population <span>2024</span></p>
+                            <p id="population">1</p>
                         </div>
                         <div class="card">
                             <div class="icon"></div>
-                            <p>Life Expectancy</p>
-                            <p>1</p>
+                            <p id="populationGrowth-title">Annual Population Growth (%)<span>2024</span></p>
+                            <p id="populationGrowth">1</p>
                         </div>
                         <div class="card">
                             <div class="icon"></div>
-                            <p>Total Population</p>
-                            <p>1</p>
+                            <p id="lifeExpectancy-title">Life Expectancy <span>2024</span></p>
+                            <p id="lifeExpectancy">1</p>
                         </div>
                     </div>
                     <div class="column">
                         <div class="card">
                             <div class="icon"></div>
-                            <p>Annual Population Growth</p>
-                            <p>1</p>
+                            <p id="netMigration-title">Net Migration <span>2024</span></p>
+                            <p id="netMigration">1</p>
                         </div>
                         <div class="card">
                             <div class="icon"></div>
-                            <p>Net Migration</p>
-                            <p>1</p>
+                            <p id="humanCapital-title">Human Capital Index <span>2024</span></p>
+                            <p id="humanCapital">1</p>
                         </div>
                         <div class="card" id="institutions">
                             <div class="icon"></div>
-                            <p>Human Capital Index</p>
-                            <p>1</p>
+                            <p id="povertyRatio-title">Poverty Headcount Ratio <span>2024</span></p>
+                            <p id="povertyRatio">1</p>
                         </div>
                     </div>
                 </div>
@@ -83,5 +93,9 @@
             </div>
         </main>
         <script src="script.js" async defer></script>
+        <script src="indicators.js" async defer></script>
+        <script src="topics.js" async defer></script>
+        <script src="countrynames.js" async defer></script>
+        <script src="main.js" type="module" async defer></script>
     </body>
 </html>
