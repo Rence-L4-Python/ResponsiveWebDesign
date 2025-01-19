@@ -1,3 +1,13 @@
+function showMenu(){
+    var menu_button = document.querySelector('.expandable-button');
+    var menu = document.querySelector('.expandable-menu');
+
+    menu.classList.toggle('showmenu');
+    menu_button.addEventListener("click", showMenu);
+}
+
+showMenu();
+
 function updateParagraph(){
     let paragraph = document.getElementById("change-p");
     let media_768 = window.matchMedia("(min-width: 768px)");

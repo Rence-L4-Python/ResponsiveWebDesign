@@ -15,7 +15,7 @@ export const topics = {
     economic: {
         gdpGrowth: "GDP Growth (%)",
         inflation: "Inflation Rate (%)",
-        personalRemittances: "Personal Remittances",
+        personalRemittances: "Personal Remittances (% of GDP)",
     },
     environment: {
         forestArea: "Forest Area (%)",
@@ -29,7 +29,7 @@ export const topics = {
         centralGovernmentDebt: "Central Government Debt (%)",
         statisticalPerformanceIndicators: "Statistical Performance Index",
         internetUsers: "Internet Users (% of population)",
-        womenInParliament: "Seats held by women in parliament",
+        womenInParliament: "Proportion of women in parliament (%)",
         foreignDirectInvestment: "Foreign Direct Investment (% of GDP)",
     },
 };

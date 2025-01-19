@@ -30,5 +30,5 @@ export const indicators = {
     statisticalPerformanceIndicators: { id: "IQ.SPI.OVRL" },
     internetUsers: { id: "IT.NET.USER.ZS" },
     womenInParliament: { id: "SG.GEN.PARL.ZS" },
-    foreignDirectInvestment: { id: "BX.KLT.DINV.CD.WD" },
+    foreignDirectInvestment: { id: "BX.KLT.DINV.WD.GD.ZS" },
 };
