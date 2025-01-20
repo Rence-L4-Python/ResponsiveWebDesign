@@ -150,6 +150,26 @@ function updateIconsOnCards(topic){
     });
 }
 
+// Update images according to the current country
+function updateSectionImage(countryCode) {
+    const sectionImg = document.querySelector("#section-1 img");
+    if (sectionImg) {
+        sectionImg.src = `Assets/img-${countryCode}.jpg`;
+        sectionImg.alt = `${countryCode} placeholder image`;
+    }
+}
+
+document.querySelector(".custom-select").addEventListener("change", function() {
+    console.log("Selected:", this.value);
+    updateSectionImage(this.value);
+});
+
+document.querySelectorAll(".menu-option").forEach(option => {
+    option.addEventListener("click", function() {
+        updateSectionImage(this.getAttribute("onclick").match(/'([^']+)'/)[1]);
+    });
+});
+
 // Setup for custom menus
 function initializeCustomMenus(){
     document.querySelector(".custom-select").addEventListener("change", function (e) {
@@ -192,7 +212,8 @@ function initializeTopicNavigation(){
     });
 }
 
-fetchCountryStats();
+fetchCountryStats("PH");
 initializeTopicNavigation();
 initializeCustomMenus();
 updateIconsOnCards();
+updateSectionImage("PH");

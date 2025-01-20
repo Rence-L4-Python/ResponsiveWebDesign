@@ -11,6 +11,7 @@ body{
     display: flex;
     flex-direction: column;
     font-weight: 900;
+    zoom: 0.9;
 }
 header{
     display: flex;
@@ -216,6 +217,7 @@ span{
     height: 200px;
     background-color: white;
     border-radius: 1rem;
+    object-fit:cover;
 }
 #section-2{
     gap: 1.5rem;
