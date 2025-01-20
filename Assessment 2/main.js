@@ -112,37 +112,19 @@ function updateIconsOnCards(topic){
         return;
     }
 
-    const cards = document.querySelectorAll(".card");
-    const metrics = Object.keys(topics[topic]);
-
-    cards.forEach((card, index) => {
-        if (!metrics[index]) return;
+    document.querySelectorAll(".card").forEach((card, index) => {
+        const metricKey = Object.keys(topics[topic])[index];
+        if (!metricKey) return;
 
         const iconElement = card.querySelector(".icon");
         if (!iconElement) return;
 
-        iconElement.innerHTML = "";
-
-        const metricKey = metrics[index];
-        let iconPath = null;
-
-        if (topic === "overview"){
-            for (let category in topicIcons){
-                if (topicIcons[category][metricKey]) {
-                    iconPath = topicIcons[category][metricKey];
-                    break;
-                }
-            }
-        } 
-        else{
-            iconPath = topicIcons[topic]?.[metricKey];
-        }
+        const iconPath = topic === "overview"
+            ? Object.values(topicIcons).find(category => category[metricKey])?.[metricKey]
+            : topicIcons[topic]?.[metricKey];
 
         if (iconPath){
-            const img = document.createElement("img");
-            img.src = iconPath;
-            img.alt = `${metricKey} icon`;
-            iconElement.appendChild(img);
+            iconElement.innerHTML = `<img src="${iconPath}" alt="${metricKey} icon">`;
         } 
         else{
             console.warn(`No icon found for "${metricKey}" in "${topic}".`);
